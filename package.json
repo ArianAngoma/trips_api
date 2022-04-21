@@ -1,7 +1,7 @@
 {
   "name": "trips_api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/app.js",
   "author": "ArianAngoma",
   "license": "MIT",
   "scripts": {
