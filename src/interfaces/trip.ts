@@ -1,5 +1,5 @@
-import {IReadingResponse} from './reading';
 import {IBoundingBox} from './boundingBox';
+import {IReadingResponse} from './reading';
 
 export interface ITrip {
   id: string;
