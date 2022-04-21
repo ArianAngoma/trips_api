@@ -2,6 +2,7 @@ import express, {Application} from 'express';
 import cors from 'cors';
 
 import {dbConnection} from '../database/config';
+import tripRoutes from '../routes/trip';
 
 class Server {
   app: Application;
@@ -15,6 +16,7 @@ class Server {
     this.port = process.env.PORT || '4000';
     this.connectDB();
     this.middlewares();
+    this.routes();
   }
 
   async connectDB(): Promise<void> {
@@ -24,6 +26,10 @@ class Server {
   middlewares() {
     this.app.use(cors());
     this.app.use(express.json());
+  }
+
+  routes() {
+    this.app.use(this.apiPaths.trips, tripRoutes);
   }
 
   listen() {
