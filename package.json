@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=production node dist/app.js",
-    "build": "tsc -p server",
+    "build": "tsc",
     "dev": "cross-env NODE_ENV=development nodemon src/app.ts",
     "lint": "eslint --fix",
     "test": "cross-env NODE_ENV=test jest --silent --verbose",
