@@ -3,7 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const connectionString = process.env.DB_MONGO!;
+const {DB_MONGO, DB_MONGO_TEST, NODE_ENV} = process.env;
+
+const connectionString = NODE_ENV === 'test' ? DB_MONGO_TEST : DB_MONGO;
 
 export const dbConnection = async (): Promise<void> => {
   try {
