@@ -36,13 +36,24 @@ To run this project, execute
 Gets a list of trips
 
 ```http
-  GET /api/trips/v1
+  GET http://localhost:4000/api/trips/v1
+```
+or deployed
+
+```https
+  GET https://trips-api-arianjs.herokuapp.com/api/trips/v1
 ```
 
 #### Post trip
 
 Take a list of readings to create a trip
 
-```http
-  POST /api/trips/v1
+```https
+  POST http://localhost:4000/api/trips/v1
+```
+
+or deployed
+
+```https
+  GET https://trips-api-arianjs.herokuapp.com/api/trips/v1
 ```
