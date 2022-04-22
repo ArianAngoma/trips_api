@@ -35,7 +35,7 @@ To run this project, execute
 
 Gets a list of trips
 
-```http
+```https
   GET http://localhost:4000/api/trips/v1
 ```
 or deployed
