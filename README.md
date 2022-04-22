@@ -55,5 +55,5 @@ Take a list of readings to create a trip
 or deployed
 
 ```https
-  GET https://trips-api-arianjs.herokuapp.com/api/trips/v1
+  POST https://trips-api-arianjs.herokuapp.com/api/trips/v1
 ```
