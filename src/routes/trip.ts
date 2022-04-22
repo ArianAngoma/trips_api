@@ -1,12 +1,13 @@
 import {Router} from 'express';
 import {body} from 'express-validator';
 
+import {createTrip, getTrips} from '../controllers/trip';
 import {validateFields} from '../middlewares/validateFields';
 import {validateLatitude, validateLongitude} from '../helpers/validations';
 
 const router = Router();
 
-router.get('/', () => console.log('get trips'));
+router.get('/', getTrips);
 
 router.post('/', [
   body('readings').isArray({min: 5}),
@@ -16,6 +17,6 @@ router.post('/', [
   body('readings.*.location.lat').custom(validateLatitude),
   body('readings.*.location.lon').custom(validateLongitude),
   validateFields,
-], () => console.log('post trips'));
+], createTrip);
 
 export default router;
